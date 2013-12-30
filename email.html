@@ -125,6 +125,7 @@ h1 {
 }
 h2 {
 	font-size: 28px;
+	text-align:center;
 }
 h3 {
 	font-size: 22px;
@@ -133,12 +134,17 @@ h3 {
 p, ul, ol { 
 	margin-bottom: 10px; 
 	font-weight: normal; 
-	font-size:14px;
+	font-size:15px;
 }
 
 ul li, ol li {
 	margin-left:5px;
 	list-style-position: inside;
+}
+
+strong{
+	font-size:18px;
+	font-weight:normal;
 }
 
 /* --------------------------------------------------- 
@@ -171,6 +177,33 @@ ul li, ol li {
 	width: 100%; 
 }
 
+.center{
+	text-align:center;
+}
+
+.logo{
+	display:inline-block;
+	width:399px;
+	height:85px;
+	max-width:90%;
+}
+
+.footnote{
+	font-size:14px;
+	color:#444;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:1.5){
+	.logo{
+		background-image:url(chartblocks@2x.png);
+		background-size:100% auto;
+		background-repeat:no-repeat;
+	}
+	.logo img{
+		visibility:hidden;
+	}
+}
+
 </style>
 </head>
  
@@ -181,28 +214,34 @@ ul li, ol li {
 	<tr>
 		<td></td>
 		<td class="container" bgcolor="#FFFFFF">
-
-			<!-- content -->
 			<div class="content">
 			<table>
 				<tr>
+					<td class="center">
+						<div class="logo">
+							<img src="chartblocks.png">
+						</div>
+					</td>
+				</tr>
+				<tr>
 					<td>
-						<p>Hi there,</p>
-						<p>Sometimes all you want is to send a simple HTML email with a basic design.</p>
-						<h1>Really simple HTML email template</h1>
-						<p>This is a really simple email template. It's sole purpose is to get you to click the button below.</p>
-						<h2>How do I use it?</h2>
-						<p>All the information you need is on GitHub.</p>
+						<h2>Activate your account</h2>
+						<p>Hi Sam,
+						<p>Thanks for creating a ChartBlocks account. To use the email address test@test.com to log in to ChartBlocks please verify your email address by clicking the button below.</p>
 						<table>
 							<tr>
-								<td class="padding">
-									<p><a href="https://github.com/leemunroe/html-email-template" class="btn-primary">View the source and instructions on GitHub</a></p>
+								<td class="padding center">
+									<p><a href="https://github.com/leemunroe/html-email-template" class="btn-primary">Verify my email address</a></p>
 								</td>
 							</tr>
 						</table>
-						<p>Feel free to use, copy, modify this email template as you wish.</p>
-						<p>Thanks, have a lovely day.</p>
-						<p><a href="http://twitter.com/leemunroe">Follow @leemunroe on Twitter</a>
+						<p>Thanks,<br><strong>Sam</strong><br> ChartBlocks Support.</p>
+						<p><a href="http://twitter.com/chartblocks">Follow @chartblocks on Twitter</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="footnote">We hope you find ChartBlocks easy to use but if you have any problems drop an email to support@chartblocks.com and we'll get straight back to you.</p>
 					</td>
 				</tr>
 			</table>
